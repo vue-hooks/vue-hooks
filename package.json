@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build": "yarn build:clean && tsc --build tsconfig.build.json",
-    "build:clean": "rm -rf packages/*/tsconfig.tsbuildinfo; rm -rf packages/*/lib; rm -rf packages/*/src/*.js; rm -rf packages/*/src/*.map; rm -rf packages/*/src/*.d.ts;",
+    "build:clean": "./scripts/clean.sh",
     "build:watch": "yarn build --watch",
     "lint": "eslint --ext .ts,.tsx,.js,.vue packages/",
     "test": "jest"
