@@ -4,10 +4,10 @@
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
-    "build": "lerna run --parallel build",
-    "watch": "tsc --build tsconfig.build.json --watch",
+    "build": "yarn build:clean && tsc --build tsconfig.build.json",
+    "build:clean": "rm -rf packages/*/tsconfig.tsbuildinfo; rm -rf packages/*/lib; rm -rf packages/*/src/*.js; rm -rf packages/*/src/*.map; rm -rf packages/*/src/*.d.ts;",
+    "build:watch": "yarn build --watch",
     "lint": "eslint --ext .ts,.tsx,.js,.vue packages/",
-    "clean": "rm -rf packages/*/tsconfig.tsbuildinfo; rm -rf packages/*/lib; rm -rf packages/*/src/*.js; rm -rf packages/*/src/*.map; rm -rf packages/*/src/*.d.ts;",
     "test": "jest"
   },
   "workspaces": [
