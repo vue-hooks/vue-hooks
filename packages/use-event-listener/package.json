@@ -1,6 +1,6 @@
 {
   "name": "vue-fn-use-event-listener",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Vue hook that lets you safely use eventListener without polluting your code",
   "author": "Yasin Uslu <nepjua@gmail.com>",
   "homepage": "https://github.com/yasinuslu/vue-hooks",
@@ -11,7 +11,7 @@
     "lib"
   ],
   "devDependencies": {
-    "@vue-hooks/test-utils": "^0.1.0"
+    "@vue-hooks/test-utils": "^0.1.1"
   },
   "peerDependencies": {
     "@vue/composition-api": "^0.3.2",

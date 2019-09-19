@@ -1,6 +1,6 @@
 {
   "name": "vue-fn-use-mouse-position",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Vue hook that returns mouse position",
   "author": "Yasin Uslu <nepjua@gmail.com>",
   "homepage": "https://github.com/yasinuslu/vue-hooks",
@@ -11,10 +11,10 @@
     "lib"
   ],
   "dependencies": {
-    "vue-fn-use-event-listener": "0.1.0"
+    "vue-fn-use-event-listener": "^0.1.1"
   },
   "devDependencies": {
-    "@vue-hooks/test-utils": "^0.1.0"
+    "@vue-hooks/test-utils": "^0.1.1"
   },
   "peerDependencies": {
     "@vue/composition-api": "^0.3.2",
