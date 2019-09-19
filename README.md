@@ -2,4 +2,4 @@
 
 ## Examples
 
-- [Basic Example](https://codesandbox.io/s/github/yasinuslu/vue-hooks/tree/master/examples/basic-example)
+- [Basic Example](https://codesandbox.io/s/github/vue-hooks/vue-hooks/tree/master/examples/basic-example)
