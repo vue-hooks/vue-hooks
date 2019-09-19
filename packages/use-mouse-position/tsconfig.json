@@ -1,0 +1,10 @@
+{
+  "extends": "../tools/tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "lib"
+  },
+  "include": ["./src"],
+  "exclude": ["./src/**/*.test.ts"],
+  "references": [{ "path": "../test-utils" }]
+}

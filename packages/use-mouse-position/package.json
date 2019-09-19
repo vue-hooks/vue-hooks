@@ -1,0 +1,25 @@
+{
+  "name": "vue-fn-use-mouse-position",
+  "version": "0.1.0",
+  "description": "> TODO: description",
+  "author": "Yasin Uslu <nepjua@gmail.com>",
+  "homepage": "https://github.com/yasinuslu/vue-hooks",
+  "license": "MIT",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "devDependencies": {
+    "@vue-hooks/test-utils": "0.1.0"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.10",
+    "@vue/composition-api": "^0.3.2"
+  }
+}

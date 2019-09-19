@@ -1,0 +1,7 @@
+{
+  "name": "@vue-hooks/test-utils",
+  "version": "0.1.0",
+  "license": "MIT",
+  "private": true,
+  "main": "./lib/index.js"
+}
