@@ -11,7 +11,7 @@
     "@vue/composition-api": "^0.3.2",
     "core-js": "^2.6.5",
     "vue": "^2.6.10",
-    "vue-fn-use-mouse-position": "0.1.0"
+    "vue-fn-use-mouse-position": "^0.1.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.11.0",
