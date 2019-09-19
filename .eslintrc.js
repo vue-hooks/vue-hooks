@@ -27,10 +27,12 @@ module.exports = {
       },
     },
   },
-  overrides: {
-    files: ['packages/test-utils/**/*.ts', '**/*.test.ts'],
-    rules: {
-      'import/no-extraneous-dependencies': 'off',
+  overrides: [
+    {
+      files: ['packages/test-utils/**/*.ts', '**/*.test.ts'],
+      rules: {
+        'import/no-extraneous-dependencies': 'off',
+      },
     },
-  },
+  ],
 };
