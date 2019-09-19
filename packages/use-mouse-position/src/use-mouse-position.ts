@@ -1,20 +1,14 @@
-import { ref, onMounted, onUnmounted, Ref } from '@vue/composition-api';
+import { ref, Ref } from '@vue/composition-api';
+import { useEventListener } from 'vue-fn-use-event-listener';
 
 export function useMousePosition(): [Ref<number>, Ref<number>] {
   const x = ref(0);
   const y = ref(0);
 
-  function update(e: MouseEvent) {
+  useEventListener('mousemove', (event: Event) => {
+    const e = event as MouseEvent;
     x.value = e.clientX;
     y.value = e.clientY;
-  }
-
-  onMounted(() => {
-    window.addEventListener('mousemove', update);
-  });
-
-  onUnmounted(() => {
-    window.removeEventListener('mousemove', update);
   });
 
   return [x, y];

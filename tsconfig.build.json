@@ -8,6 +8,9 @@
       "path": "packages/test-utils"
     },
     {
+      "path": "packages/use-event-listener"
+    },
+    {
       "path": "packages/use-mouse-position"
     }
   ],

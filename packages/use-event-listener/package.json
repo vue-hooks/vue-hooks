@@ -1,18 +1,15 @@
 {
-  "name": "vue-fn-use-mouse-position",
+  "name": "vue-fn-use-event-listener",
   "version": "0.1.0",
-  "description": "Vue hook that returns mouse position",
+  "description": "Vue hook that lets you safely use eventListener without polluting your code",
   "author": "Yasin Uslu <nepjua@gmail.com>",
   "homepage": "https://github.com/yasinuslu/vue-hooks",
   "license": "MIT",
-  "main": "lib/use-mouse-position.js",
-  "types": "lib/use-mouse-position.d.ts",
+  "main": "lib/use-event-listener.js",
+  "types": "lib/use-event-listener.d.ts",
   "files": [
     "lib"
   ],
-  "dependencies": {
-    "vue-fn-use-event-listener": "0.1.0"
-  },
   "devDependencies": {
     "@vue-hooks/test-utils": "^0.1.0"
   },

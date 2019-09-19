@@ -1,5 +1,10 @@
 {
   "extends": "./packages/tools/tsconfig.base",
+  "compilerOptions": {
+    "declaration": false,
+    "noEmit": true,
+    "emitDeclarationOnly": false
+  },
   "files": [],
-  "include": []
+  "include": ["**/*.test.ts"]
 }

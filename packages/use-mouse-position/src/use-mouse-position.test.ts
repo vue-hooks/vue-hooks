@@ -27,15 +27,4 @@ describe('useMousePosition', () => {
     expect(wrapper.find('.x').text()).toBe('100');
     expect(wrapper.find('.y').text()).toBe('120');
   });
-
-  // FIXME: this seems a fishy way to test and also it doesn't ensure that it fully cleans up
-  it('should cleanup', async () => {
-    const removeEventListener = jest.fn();
-    window.removeEventListener = removeEventListener;
-
-    const wrapper = shallowMount(Component, { localVue });
-    wrapper.destroy();
-
-    expect(removeEventListener).toHaveBeenCalledTimes(1);
-  });
 });
