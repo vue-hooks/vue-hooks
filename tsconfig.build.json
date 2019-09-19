@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "composite": true
+  },
+  "extends": "./packages/tools/tsconfig.base",
+  "references": [
+    {
+      "path": "packages/test-utils"
+    },
+    {
+      "path": "packages/use-mouse-position"
+    }
+  ],
+  "files": [],
+  "include": []
+}

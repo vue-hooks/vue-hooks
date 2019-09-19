@@ -1,0 +1,5 @@
+{
+  "extends": "./packages/tools/tsconfig.base",
+  "files": [],
+  "include": []
+}

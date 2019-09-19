@@ -1,0 +1,33 @@
+{
+  "name": "vue-hooks",
+  "private": true,
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "lerna run --parallel build",
+    "watch": "tsc --build tsconfig.build.json --watch",
+    "lint": "eslint --ext .ts,.tsx,.js,.vue packages/",
+    "clean": "rm -rf packages/*/tsconfig.tsbuildinfo; rm -rf packages/*/lib; rm -rf packages/*/src/*.js; rm -rf packages/*/src/*.map; rm -rf packages/*/src/*.d.ts;",
+    "test": "jest"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "homepage": "https://github.com/yasinuslu/vue-hooks",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yasinuslu/vue-hooks"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lerna run --concurrency 1 precommit",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "husky": "^3.0.5",
+    "lerna": "^3.16.4"
+  }
+}
