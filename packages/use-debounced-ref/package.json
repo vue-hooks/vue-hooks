@@ -1,0 +1,20 @@
+{
+  "name": "vue-fn-use-debounced-value",
+  "version": "0.1.1",
+  "description": "Vue hook that returns a debounced reference for any observable you pass",
+  "author": "Yasin Uslu <nepjua@gmail.com>",
+  "homepage": "https://github.com/yasinuslu/vue-hooks",
+  "license": "MIT",
+  "main": "lib/use-debounced-ref.js",
+  "types": "lib/use-debounced-ref.d.ts",
+  "files": [
+    "lib"
+  ],
+  "devDependencies": {
+    "@vue-hooks/test-utils": "^0.1.1"
+  },
+  "peerDependencies": {
+    "@vue/composition-api": "^0.3.2",
+    "vue": "^2.6.10"
+  }
+}
