@@ -6,4 +6,10 @@ module.exports = {
       tsConfig: 'tsconfig.test.json',
     },
   },
+  collectCoverageFrom: [
+    'packages/*/src/**/*.ts',
+    '!packages/test-utils/**',
+    '!**/lib/**',
+    '!**/node_modules/**',
+  ],
 };
