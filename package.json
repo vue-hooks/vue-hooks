@@ -11,7 +11,8 @@
     "test": "jest"
   },
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "examples/*"
   ],
   "homepage": "https://github.com/yasinuslu/vue-hooks",
   "repository": {
