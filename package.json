@@ -11,8 +11,7 @@
     "test": "jest"
   },
   "workspaces": [
-    "packages/*",
-    "examples/*"
+    "packages/*"
   ],
   "homepage": "https://github.com/yasinuslu/vue-hooks",
   "repository": {
@@ -24,5 +23,8 @@
       "pre-commit": "lerna run --concurrency 1 precommit",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "devDependencies": {
+    "@vue-hooks/tools": "0.1.0"
   }
 }
