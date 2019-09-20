@@ -1,9 +1,6 @@
-import { shallowMount } from '@vue/test-utils';
-import { createVue, fireMouseMoveEvent } from '@vue-hooks/test-utils';
-import { reactive, ref } from '@vue/composition-api';
+import { shallowMount } from '@vue-hooks/test-utils';
+import { ref } from '@vue/composition-api';
 import { useDebouncedRef } from './use-debounced-ref';
-
-const localVue = createVue();
 
 const createComponent = (timeout?: number) => {
   return {
@@ -28,7 +25,7 @@ describe('useDebouncedRef', () => {
   it('should debounce the value', async () => {
     jest.useFakeTimers();
 
-    const wrapper = shallowMount(createComponent(), { localVue });
+    const wrapper = shallowMount(createComponent());
 
     const inputValue = 'A search input value that I want to debounce';
     wrapper.find('.input').setValue(inputValue);
@@ -51,7 +48,7 @@ describe('useDebouncedRef', () => {
   it('should debounce the value for given timeout', async () => {
     jest.useFakeTimers();
 
-    const wrapper = shallowMount(createComponent(2000), { localVue });
+    const wrapper = shallowMount(createComponent(2000));
 
     wrapper.find('.input').setValue('');
     wrapper.find('.input').setValue('value1');
@@ -87,20 +84,16 @@ describe('useDebouncedRef', () => {
     console.error = () => {};
 
     expect(() => {
-      shallowMount(
-        {
-          template: '',
-          setup() {
-            const normalVariable = 'normal-variable';
+      shallowMount({
+        setup() {
+          const normalVariable = 'normal-variable';
 
-            // we're actually testing the very thing typescript doesn't like here
-            // @ts-ignore
-            const debouncedValue = useDebouncedRef(normalVariable);
-            return { debouncedValue };
-          },
+          // we're actually testing the very thing typescript doesn't like here
+          // @ts-ignore
+          const debouncedValue = useDebouncedRef(normalVariable);
+          return { debouncedValue };
         },
-        { localVue },
-      );
+      });
     }).toThrow(new Error('You have to provide a ref'));
   });
 });

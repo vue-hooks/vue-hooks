@@ -1,9 +1,6 @@
-import { shallowMount } from '@vue/test-utils';
-import { createVue, fireMouseMoveEvent } from '@vue-hooks/test-utils';
+import { fireMouseMoveEvent, shallowMount } from '@vue-hooks/test-utils';
 import { reactive, ref } from '@vue/composition-api';
 import { useEventListener } from './use-event-listener';
-
-const localVue = createVue();
 
 const Component = {
   template: /* HTML */ /* html */ `
@@ -28,7 +25,7 @@ const Component = {
 
 describe('useEventListener', () => {
   it('should attach event', () => {
-    const wrapper = shallowMount(Component, { localVue });
+    const wrapper = shallowMount(Component);
 
     fireMouseMoveEvent(100, 120);
     expect(wrapper.find('.x').text()).toBe('100');
@@ -40,7 +37,7 @@ describe('useEventListener', () => {
     const removeEventListener = jest.fn();
     window.removeEventListener = removeEventListener;
 
-    const wrapper = shallowMount(Component, { localVue });
+    const wrapper = shallowMount(Component);
     wrapper.destroy();
 
     expect(removeEventListener).toHaveBeenCalledTimes(1);

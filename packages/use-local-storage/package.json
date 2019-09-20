@@ -1,0 +1,23 @@
+{
+  "name": "vue-fn-use-local-storage",
+  "version": "0.1.1",
+  "description": "Vue hook that syncs any observable you pass",
+  "author": "Yasin Uslu <nepjua@gmail.com>",
+  "homepage": "https://github.com/yasinuslu/vue-hooks",
+  "license": "MIT",
+  "main": "lib/use-local-storage.js",
+  "types": "lib/use-local-storage.d.ts",
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "vue-fn-use-event-listener": "0.1.1"
+  },
+  "devDependencies": {
+    "@vue-hooks/test-utils": "^0.1.1"
+  },
+  "peerDependencies": {
+    "@vue/composition-api": "^0.3.2",
+    "vue": "^2.6.10"
+  }
+}

@@ -1,8 +1,5 @@
-import { shallowMount } from '@vue/test-utils';
-import { createVue, fireMouseMoveEvent } from '@vue-hooks/test-utils';
+import { shallowMount, fireMouseMoveEvent } from '@vue-hooks/test-utils';
 import { useMousePosition } from './use-mouse-position';
-
-const localVue = createVue();
 
 const Component = {
   template: /* HTML */ /* html */ `
@@ -20,8 +17,8 @@ const Component = {
 };
 
 describe('useMousePosition', () => {
-  it('should update mouse position', async () => {
-    const wrapper = shallowMount(Component, { localVue });
+  it('should update mouse position', () => {
+    const wrapper = shallowMount(Component);
 
     fireMouseMoveEvent(100, 120);
     expect(wrapper.find('.x').text()).toBe('100');
