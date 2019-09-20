@@ -1,5 +1,5 @@
 export const fireMouseMoveEvent = (x: number, y: number) => {
-  document.dispatchEvent(
+  dispatchEvent(
     new MouseEvent('mousemove', {
       view: window,
       bubbles: true,
