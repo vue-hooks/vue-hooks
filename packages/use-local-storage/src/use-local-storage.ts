@@ -1,4 +1,4 @@
-import { ref, watch } from '@vue/composition-api';
+import { ref, watch, Ref } from '@vue/composition-api';
 
 const jsonSerializer = {
   serialize(input: any) {
@@ -30,7 +30,7 @@ const jsonSerializer = {
 const serializer = jsonSerializer;
 const storage = localStorage;
 
-export function useLocalStorage<T>(key: string) {
+export function useLocalStorage<T>(key: string): Ref<T> {
   const read = () => serializer.deserialize(storage.getItem(key));
   const write = (value: T) => storage.setItem(key, serializer.serialize(value));
 
